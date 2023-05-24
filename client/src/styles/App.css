@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #root {
+    @apply font-poppins;
+  }
+
+  img {
+    @apply h-full;
+  }
+}
+
+@layer utilities {
+  .side-nav .nav-link {
+    @apply flex gap-4 items-center py-4 pl-4 font-medium;
+  }
+
+  .side-nav a.active {
+    @apply bg-white text-accent rounded-tl-full rounded-bl-full;
+  }
+
+  .side-nav-icons {
+    @apply inline h-6 w-6;
+  }
+
+  .profile-nav .active {
+    @apply after:mt-1 after:content-[''] after:h-1 after:block after:bg-accent after:rounded-full;
+  }
+}
+
+@layer components {
+  .input-style {
+    @apply block w-full h-full py-2 px-4.5 border border-black rounded-lg text-text;
+  }
+
+  /* room card */
+  .stacked {
+    @apply grid;
+  }
+
+  .stacked > * {
+    @apply col-start-1 col-end-2 row-start-1 row-end-2;
+  }
+
+  a {
+    @apply block;
+  }
+}
+
+.card-content-shadow {
+  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.1);
+}
